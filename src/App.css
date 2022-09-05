@@ -1,38 +1,320 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  /* font-family: "Alegreya SC"; */
+  font-family: "Source Serif Pro";
+}
+
+:root {
+  --Primary-Blue: #0d1359;
+  --Primary-Blue-hsl: hsl(235, 75%, 20%);
+  --Second-Blue: #7983ec;
+  --Lightest-Blue: #e9eafc;
+  --Accent-Color: #df208f;
+}
+
+
+h1 {
+  font-size: 3.6rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.icon {
+  padding: .3rem;
+  border-radius: .5rem;
+  color: transparent;
+  background-color: var(--Accent-Color);
+  color: var(--Primary-Blue);
+  margin-right: .5rem;
+}
+
 .App {
+  height: 100vh;
+}
+
+/* Nav Styling Start */
+.nav {
+  background-color: var(--Primary-Blue);
+  color: var(--Lightest-Blue);
+  text-align: right;
+  height: 10vh;
+}
+
+
+
+.nav .navText {
+  /* width: fit-content; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav .navText h1,
+.nav .navText .nav-side-text {
+  /* font-style: italic; */
+  margin: 0 .5rem;
+}
+
+.nav .navText .nav-side-text {
+  font-style: italic;
+}
+
+/* Nav Styling End */
+/*  */
+/* Content body Styling Start */
+
+.content-body {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: var(--Primary-Blue);
+}
+
+/* Content body Styling end */
+/*  */
+/* form Styling start */
+.form {
+  width: 48vw;
+  padding: 2rem;
+  position: relative;
+  margin: 2rem;
+  border: 1px solid var(--Primary-Blue);
+  border-radius: 15px;
+  border: 1px solid var(--Second-Blue);
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form:hover {
+  border: 1px solid var(--Lightest-Blue);
+}
+
+.form .form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .form-inputs input,
+.form .form-inputs textarea {
+  height: 4rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  border: 0;
+  outline: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.6rem;
+  color: var(--Second-Blue);
+}
+
+.form .form-inputs textarea {
+  padding: 1rem;
+  height: 6rem;
+}
+
+.form .form-inputs input:focus {
+  border: 2px solid var(--Accent-Color);
+}
+
+#uploadPhoto {
+  display: none;
+}
+
+.form .form-inputs .form-group {
+  display: flex;
+  align-items: center;
+
+}
+
+.form .form-inputs .form-group input {
+  width: 100%;
+}
+
+.form-group-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group-group input {
+  width: 48%;
+}
+
+.form .form-inputs .icon {
+  margin-right: 1rem;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  height: 4rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  background-color: var(--Accent-Color);
+  color: var(--Primary-Blue);
+  transition: 200ms ease-in-out;
+}
+
+.btn p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+.btn:hover {
+  filter: brightness(1.5);
+  transform: scale(105%);
+  transition: 200ms ease-in-out;
+}
+
+/* form Styling end */
+/*  */
+/* input preview stlying start */
+
+.input-preview-container {
+  position: relative;
+  /* width: 48vw; */
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: url(/src/components/Assets/gggrain.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 1px solid var(--Lightest-Blue); */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.input-preview-container .profile-card {
+  width: 25rem;
+  height: 40rem;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--Primary-Blue);
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.input-preview-container .profile-card:hover {
+  transform: scale(105%);
+  transition: 500ms ease-in-out;
+}
+
+/* .input-preview-container .group{
+  position: absolute;
+} */
+
+.input-preview-container .profile-card .bkgDiv {
+  width: 100%;
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-bottom: .5rem;
+  height: fit-content;
+  background-color: var(--Lightest-Blue);
+}
+
+.input-preview-container .profile-card .imgDiv {
+  width: 14rem;
+  height: 14rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.profile-card .imgDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* profile card texts */
+.fullName,
+.specialty,
+.twitter_handle,
+.portfolio_link {
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fullName {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--Lightest-Blue);
+  margin-bottom: 0.3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.specialty {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--Second-Blue);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: .2rem;
+  /* text-align: right; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.twitter_handle {
+  font-size: 1.4rem;
+  font-style: italic;
+  padding-bottom: .7rem;
+  color: var(--Lightest-Blue);
+  border-bottom: 1px solid var(--Lightest-Blue);
 }
 
-.App-link {
-  color: #61dafb;
+
+.portfolio_link {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--Lightest-Blue);
+  text-align: center;
+  margin-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.desc {
+  color: #fff;
+  width: 85%;
+  word-wrap: break-word;
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: .7rem;
+  margin-left: auto;
+  margin-right: auto;
 }
