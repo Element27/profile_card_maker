@@ -1,10 +1,10 @@
 import { FormInput, NavBar } from './components/index'
 
-import './App.css';
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-[#0F172A] h-full">
       <NavBar />
       <div className="content-body">
 
