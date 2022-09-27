@@ -46,17 +46,20 @@ function FormInput() {
   };
 
   const profileForm = (
-    <div className="w-full lg:w-[40vw] p-4 md:p-6  bg-white rounded-sm bg-opacity-10 backdrop-filter backdrop-blur-lg ">
-      <form className="flex flex-col" onSubmit={(e) => createProfile(e)}>
-        <div className="">
+    <div className="w-full lg:w-[40vw] p-4 md:p-6 lg:h-full">
+      <form
+        className="flex flex-col border-2 border-solid border-white p-4 rounded-lg hover:border-[#7983ec]"
+        onSubmit={(e) => createProfile(e)}
+      >
+        <div className=" grid md:grid-cols-2 md:gap-3">
           <input
-            className="h-10 px-2 w-full mb-4  border rounded-md required:border-red-500 focus:outline-1 focus:outline-[#35b5ee]"
+            className="h-10 px-2 w-full mb-4  border rounded-md required:border-red-500 focus:outline-1 focus:outline-[#7983ec]"
             type="text"
             id="inputFirstName"
             placeholder="First Name" /*required*/
           />
           <input
-            className="h-10 px-2 w-full mb-4 required:border-red-500  border rounded-md focus:outline-1 focus:outline-[#35b5ee]"
+            className="h-10 px-2 w-full mb-4 required:border-red-500  border rounded-md focus:outline-1 focus:outline-[#7983ec]"
             type="text"
             id="inputLastName"
             placeholder="Last Name" /*required*/
@@ -64,30 +67,30 @@ function FormInput() {
         </div>
 
         <input
-          className="h-10 px-2 w-full mb-4 border rounded-md required:border-red-500 focus:outline-1 focus:outline-[#35b5ee] "
+          className="h-10 px-2 w-full mb-4 border rounded-md required:border-red-500 focus:outline-1 focus:outline-[#7983ec] "
           type="text"
           id="inputSpecialty"
           placeholder='What you do! Ex: "content writer"'
           maxLength={25} /*required*/
         />
 
-        <div className="w-full required:border-red-500">
+        <div className=" grid md:grid-cols-2 md:gap-3  required:border-red-500">
           <input
-            className="h-10 px-2 mb-4 required:border-red-500 border rounded-md w-full focus:outline-1 focus:outline-[#35b5ee] "
+            className="h-10 px-2 mb-4 required:border-red-500 border rounded-md w-full focus:outline-1 focus:outline-[#7983ec] "
             type="text"
             id="inputHandle"
             placeholder="twitter handle" /*required*/
           />
 
           <input
-            className="h-10 px-2 mb-4 border required:border-red-500 rounded-md w-full focus:outline-1 focus:outline-[#35b5ee] "
+            className="h-10 px-2 mb-4 border required:border-red-500 rounded-md w-full focus:outline-1 focus:outline-[#7983ec] "
             type="text"
             id="inputLink"
             placeholder="link to your portfolio site" /*required*/
           />
         </div>
         <textarea
-          className="text-[#424B5C] mb-4 p-2 h-28 rounded-md required:border-red-500  focus:outline-1 focus:outline-[#35B5EE] "
+          className="text-[#8695b3] mb-4 p-2 h-28 rounded-md required:border-red-500 focus:outline-1 break-normal focus:outline-[#7983ec] "
           name=""
           id="inputDesc"
           cols="50"
@@ -103,7 +106,7 @@ function FormInput() {
           accept="image/*"
         />
         <label
-          className="w-full bg-[#fff] text-[#0F172A] text-center h-8 rounded-md border-2 hover:border-solid hover:border-[#35b5ee]"
+          className="w-full bg-[#df208f] text-[#0d1359] text-center py-auto h-10 py-2 font-semibold rounded-md"
           htmlFor="uploadPhoto"
           onClick={dpUpload}
         >
@@ -111,7 +114,7 @@ function FormInput() {
         </label>
 
         <button
-          className="bg-[#35B5EE] text-[#0F172A] my-8 mx-auto h-8 px-10 rounded-lg font-bold md:w-fit w-full"
+          className="bg-[#df208f] text-[#0d1359] mt-4 mx-auto h-10 px-10 rounded-lg font-semibold w-full"
           type="submit"
         >
           Create
@@ -121,7 +124,7 @@ function FormInput() {
   );
 
   const inputPreview = (
-    <div className="w-full lg:w-[60vw] p-4 md:p-6">
+    <div className="w-full lg:w-[60vw] p-4 md:p-6 bg-[#12c2e9] bg-gradient-to-t from-[#f64f59] via-[#c471ed] to-[#12c2e9] ">
       <div className="w-[268px] mx-auto rounded-2xl bg-[#0d1359] overflow-hidden relative">
         {/* display profile image */}
         <div className="w-full p-4 mb-2 h-fit bg-[#e9eafc] ">
@@ -145,7 +148,7 @@ function FormInput() {
           </span>
 
           <span className="text-center block text-xs italic text-[#e9eafc] border-b border-solid border-[#e9eafc] ">
-            <i className="fa-brands fa-twitter icon text-xs  p-1 rounded-md text-[#0d1359] bg-[#df208f] mr-1"></i>
+            <i className="fa-brands fa-twitter icon text-xs mb-1  p-1 rounded-md text-[#0d1359] bg-[#df208f] mr-1"></i>
             {details.twitterHandle}
           </span>
 

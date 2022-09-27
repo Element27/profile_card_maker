@@ -4,7 +4,7 @@ import { FormInput, NavBar } from './components/index'
 
 function App() {
   return (
-    <div className="bg-[#0F172A] h-full">
+    <div className="bg-[#0d1359] h-full lg:h-[100vh]">
       <NavBar />
       <div className="content-body">
 

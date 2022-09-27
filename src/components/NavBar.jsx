@@ -8,7 +8,7 @@ function NavBar() {
   // const offWhite = "#E2E8F0";
 
   return (
-    <div className=" justify-between mx-auto items-center text-center border-b-2  border-b-[#424b5c] py-3">
+    <div className=" justify-between mx-auto items-center text-center py-3">
       <h1 className="md:text-5xl sm:text-3xl text-xl font-bold text-[#e2e8f0]">
         Profile Card Makr!
       </h1>
